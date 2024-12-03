@@ -54,9 +54,10 @@ def main():
     for row in inputs:
         if validate_row(row):
             validated += 1
-        else:
-            if remove_and_validate(row):
-                validated += 1
+            continue
+
+        if remove_and_validate(row):
+            validated += 1
 
     return validated
 
